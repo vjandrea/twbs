@@ -123,22 +123,20 @@ class Twbs {
 	}
 
 	/**
-	 * 
+	 * Returns a panel with an optional footer
 	 *
-	 * @param 
+	 * @param string $content default ''
+	 * @param string $footer default ''
 	 * @return void
 	 **/
-	public function panel()
+	public function panel($content = '', $footer = '')
 	{
-		
+		$html = '<div class="panel panel-default">
+  <div class="panel-body">'.$content.'</div>';
+  		$html .= $footer ? '<div class="panel-footer">'.$footer.'</div>' : '';
+		$html .= '</div>';
+		return $html;
 	}
-	/*<div class="panel panel-default">
-  <div class="panel-body">
-    Panel content
-  </div>
-  <div class="panel-footer">Panel footer</div>
-</div>*/
-
 	
 	/**
 	 * 
